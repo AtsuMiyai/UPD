@@ -12,8 +12,8 @@
     <br>
     <a href='https://yu1ut.com/' target='_blank'>Qing Yu<sup>1,5</sup></a>&emsp;
     <a href='https://scholar.google.co.jp/citations?hl=ja&user=2bCSG1AAAAAJ&view_op=list_works&authuser=1&sortby=pubdate' target='_blank'>Go Irie<sup>6</sup></a>&emsp;
-    <a href='https://ece.duke.edu/faculty/hai-helen-li' target='_blank'>Hai Li<sup>3</sup></a>&emsp;
 	<a href='https://pages.cs.wisc.edu/~sharonli/' target='_blank'>Sharon Yixuan Li<sup>4</sup></a>&emsp;
+    <a href='https://ece.duke.edu/faculty/hai-helen-li' target='_blank'>Hai Li<sup>3</sup></a>&emsp;
 	<a href='https://liuziwei7.github.io/' target='_blank'>Ziwei Liu<sup>2</sup></a>
     <br>
     <a href='https://scholar.google.co.jp/citations?user=CJRhhi0AAAAJ&hl=en' target='_blank'>Kiyoharu Aizawa<sup>1</sup></a>
