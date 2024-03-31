@@ -7,7 +7,7 @@
 <br>
     <a href='https://atsumiyai.github.io/' target='_blank'>Atsuyuki Miyai<sup>1</sup></a>&emsp;
     <a href='https://jingkang50.github.io/' target='_blank'>Jingkang Yang<sup>2</sup></a>&emsp;
-    <a href='https://github.com/zjysteven' target='_blank'>Jingyang Zhang<sup>3</sup></a>&emsp;
+    <a href='https://zjysteven.github.io/' target='_blank'>Jingyang Zhang<sup>3</sup></a>&emsp;
     <a href='https://pages.cs.wisc.edu/~alvinming/' target='_blank'>Yifei Ming<sup>4</sup></a>&emsp;
     <br>
     <a href='https://yu1ut.com/' target='_blank'>Qing Yu<sup>1,5</sup></a>&emsp;
@@ -59,7 +59,7 @@ Please refer to [our huggingface Dataset](https://huggingface.co/datasets/MM-UPD
 
 #### Instruction tuning data (Optional)
 We instruction tuning data (.json) via [this url](https://drive.google.com/file/d/1SI3h0QFn5F9VMVtOBJ2sPKq8nBZgc7nA/view?usp=sharing).     
-Please download, untar and put it to `~/data`.   
+Please download, unzip and put it to `~/data`.   
 As for the images for the instruction tuning data, we used the images for the official LLaVA's instruction tuning. Please download the images from constituting datasets:
 - COCO: [train2017](http://images.cocodataset.org/zips/train2017.zip)
 - GQA: [images](https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip)
@@ -155,9 +155,9 @@ We provide a Google Sheet for the detailed results on each senario (Fig. 3, 4 ,5
 
 ## Acknowledgement
 We adopt these codes to create this repository.
-* [Visual Instruction Tuning](https://github.com/haotian-liu/LLaVA/tree/main), in NeurIPS, 2023.
-* [OpenCompass](https://github.com/open-compass/opencompass/tree/e019c831fe97243ed17ce02258e5965117ce30f7)
-* [Otter](https://github.com/Luodian/Otter/tree/main/pipeline)
+* [Visual Instruction Tuning](https://github.com/haotian-liu/LLaVA), in NeurIPS, 2023.
+* [OpenCompass](https://github.com/open-compass/opencompass)
+* [Otter](https://github.com/Luodian/Otter/)
 
 
 ## Contact
