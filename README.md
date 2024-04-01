@@ -169,7 +169,7 @@ If you have questions, please open an issue mentioning @AtsuMiyai or send an ema
 ## Ads
 If you are interested in this work, please refer to our other projects.
 * [OpenOOD](https://github.com/Jingkang50/OpenOOD), in NeurIPS Dataset and Benchmark Track, 2022 
-* [OpenOOD v1.5](https://github.com/Jingkang50/OpenOOD) and in NeurIPSW, 2023
+* [OpenOOD v1.5](https://github.com/Jingkang50/OpenOOD) in NeurIPSW, 2023
 * [LoCoOp](https://github.com/AtsuMiyai/LoCoOp/), in NeurIPS, 2023.
 
 
