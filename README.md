@@ -29,6 +29,9 @@
     <br>
 </div>
 
+## News
+2024.03: The short version (4p) of this paper has been accepted by [ICLR 2024 R2-FM Workshop](https://iclr-r2fm.github.io). 
+
 
 ## Introduction
 This paper introduces a novel and significant challenge for Vision Language Models (VLMs), termed **Unsolvable Problem Detection (UPD)**. UPD examines the VLM's ability to withhold answers when faced with unsolvable problems in the context of Visual Question Answering (VQA) tasks. UPD encompasses three distinct settings: **Absent Answer Detection (AAD)**, **Incompatible Answer Set Detection (IASD)**, and **Incompatible Visual Question Detection (IVQD)**. To deeply investigate the UPD problem, extensive experiments indicate that **most VLMs, including GPT-4V and LLaVA-Next-34B, struggle with our benchmarks to varying extents**, highlighting significant room for the improvements. To address UPD, we explore both training-free and training-based solutions, offering new insights into their effectiveness and limitations. We hope our insights, together with future efforts within the proposed UPD settings, will enhance the broader understanding and development of more practical and reliable VLMs.
@@ -162,3 +165,20 @@ We adopt these codes to create this repository.
 
 ## Contact
 If you have questions, please open an issue mentioning @AtsuMiyai or send an email to miyai[at]hal.t.u-tokyo.ac.jp
+
+## Ads
+If you are interested in this work, please refer to our other projects.
+* [OpenOOD, OpenOOD v1.5](https://github.com/Jingkang50/OpenOOD), in NeurIPS Dataset and Benchmark Track, 2022 and in NeurIPSW, 2023
+* [LoCoOp](https://github.com/AtsuMiyai/LoCoOp/), in NeurIPS, 2023.
+
+
+
+## Citaiton
+If you find our work interesting or use our code/models, please consider citing:
+```bibtex
+@article{miyai2024upd,
+  title={Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models},
+  author={Miyai, Atsuyuki and Yang, Jingkang and Zhang, Jingyang and Ming, Yifei and Yu, Qing and Irie, Go and Li, Yixuan and Li, Hai and Liu, Ziwei and Aizawa, Kiyoharu},
+  journal={arXiv preprint arXiv:2403.20331},
+  year={2024}
+}
