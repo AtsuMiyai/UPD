@@ -1,5 +1,5 @@
 # Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models
-[**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**📖 arXiv**](hogehogehoge) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
+[**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
 <p align="center" width="100%">
 <img src=fig/overview_upd.png  width="100%" height="100%">
 <div>
@@ -168,7 +168,8 @@ If you have questions, please open an issue mentioning @AtsuMiyai or send an ema
 
 ## Ads
 If you are interested in this work, please refer to our other projects.
-* [OpenOOD, OpenOOD v1.5](https://github.com/Jingkang50/OpenOOD), in NeurIPS Dataset and Benchmark Track, 2022 and in NeurIPSW, 2023
+* [OpenOOD](https://github.com/Jingkang50/OpenOOD), in NeurIPS Dataset and Benchmark Track, 2022 
+* [OpenOOD v1.5](https://github.com/Jingkang50/OpenOOD) and in NeurIPSW, 2023
 * [LoCoOp](https://github.com/AtsuMiyai/LoCoOp/), in NeurIPS, 2023.
 
 
