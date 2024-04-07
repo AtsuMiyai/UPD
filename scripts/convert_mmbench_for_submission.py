@@ -17,8 +17,7 @@ def get_args():
 
 if __name__ == "__main__":
     args = get_args()
-
-    questions = load_dataset("TEMP34/TEMP_DATA", name=args.data_name)["test"]
+    questions = load_dataset("MM-UPD/MM-UPD", name=args.data_name)["test"]
     df = questions.to_pandas()
 
     cur_df = df.copy()
