@@ -4,7 +4,7 @@ DATA_NAME="mmaad_standard_base"
 CURRENT_TIME=$(date +"%Y%m%d%H%M%S")
 FILE_NAME="cogvlm-17b_${CURRENT_TIME}"
 
-python -m vlms.cogvlms.cogvlm_vqa_updbench \
+python -m vlms.cogvlm.cogvlm_vqa_updbench \
     --data-name ${DATA_NAME} \
     --answers-file ./output/aad/answers/cogvlm/instruction/${DATA_NAME:0:-5}_instruction/${FILE_NAME}.jsonl \
     --single-pred-prompt \

@@ -4,7 +4,7 @@ DATA_NAME="mmivqd_ivqd_option"
 CURRENT_TIME=$(date +"%Y%m%d%H%M%S")
 FILE_NAME="cogvlm-17b_${CURRENT_TIME}"
 
-python -m vlms.cogvlms.cogvlm_vqa_updbench \
+python -m vlms.cogvlm.cogvlm_vqa_updbench \
     --data-name ${DATA_NAME} \
     --answers-file ./output/ivqd/answers/cogvlm/option/${DATA_NAME}/${FILE_NAME}.jsonl \
     --single-pred-prompt \
