@@ -1,7 +1,7 @@
 # Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models
 [**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
 <p align="center" width="100%">
-<img src=fig/overview_upd.png  width="100%" height="100%">
+<img src=figs/overview_upd.png  width="100%" height="100%">
 <div>
 <div align="center">
 <br>
@@ -55,7 +55,7 @@ pip install flash-attn --no-build-isolation --no-cache-dir
 
 ### Data
 #### MM-UPD Bench (Unnecessary)
-![UPD_SETTGING_OVERVIEW](fig/example_each_setting.png)
+![UPD_SETTGING_OVERVIEW](figs/example_each_setting.png)
 
 We provide all benchmarks via huggingface 🤗. All benchmarks are automatically downloaded by running scripts.
 Please refer to [our huggingface Dataset](https://huggingface.co/datasets/MM-UPD/MM-UPD) for more details.
@@ -152,7 +152,7 @@ As of March 2024, LLaVA1.6 has not yet released official LoRA tuning code. There
 
 ## Model Results
 We provide a Google Sheet for the detailed results on each senario (Fig. 3, 4 ,5 ,6 in the paper). You can access [the sheet](https://docs.google.com/spreadsheets/d/1tm4QEe5RluI9jAINSzVoPcmYPTH5Yn_UMEh6sPG9XeI/edit#gid=0) here and can easily draw radar charts!
-![SPREAD_SHEET](fig/spread_sheet.png)
+![SPREAD_SHEET](figs/spread_sheet.png)
 
 
 
