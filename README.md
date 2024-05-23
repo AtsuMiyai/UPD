@@ -61,6 +61,8 @@ pip install flash-attn --no-build-isolation --no-cache-dir
 We provide all benchmarks via huggingface 🤗. All benchmarks are automatically downloaded by running scripts.
 Please refer to [our huggingface Dataset](https://huggingface.co/datasets/MM-UPD/MM-UPD) for more details.
 
+> If we encounter `DatasetGenerationError`, please delete the cache data of previous version.
+
 #### Instruction tuning data (Optional)
 We instruction tuning data (.json) via [this url](https://drive.google.com/file/d/1SI3h0QFn5F9VMVtOBJ2sPKq8nBZgc7nA/view?usp=sharing).     
 Please download, unzip and put it to `~/data`.   
