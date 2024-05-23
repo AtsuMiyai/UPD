@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATA_NAME="mmivqd_ivqd_option"
+DATA_NAME="mmivqd_option"
 CURRENT_TIME=$(date +"%Y%m%d%H%M%S")
 FILE_NAME="gpt4v_${CURRENT_TIME}"
 

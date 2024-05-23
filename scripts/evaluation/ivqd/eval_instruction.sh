@@ -1,17 +1,13 @@
 #!/bin/bash
 
-UPD_RESULT_PATH=$1
-STANDARD_RESULT_PATH=$2
+RESULT_PATH=$1
 
-UPD_DATA_NAME=mmivqd_ivqd_base
-STANDARD_DATA_NAME=mmivqd_standard_base
+DATA_NAME=mmivqd_base
 
 python automatic_eval/calculate_scores.py \
     --upd_type ivqd \
-    --eval_file_upd ${UPD_RESULT_PATH} \
-    --eval_file_standard ${STANDARD_RESULT_PATH} \
-    --meta_file_upd ${UPD_DATA_NAME} \
-    --meta_file_standard ${STANDARD_DATA_NAME} \
+    --eval_file ${RESULT_PATH} \
+    --meta_file ${DATA_NAME} \
     --question_type inst \
     --openai_api_key ${OPENAI_API_KEY}
     

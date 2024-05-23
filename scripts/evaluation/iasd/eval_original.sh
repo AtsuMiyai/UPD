@@ -1,12 +1,12 @@
 #!/bin/bash
 
-STANDARD_RESULT_PATH=$1
+RESULT_PATH=$1
 
-STANDARD_DATA_NAME=mmiasd_standard_base
+DATA_NAME=mmiasd_base
 
 python automatic_eval/calculate_scores.py \
     --upd_type iasd \
-    --eval_file_standard ${STANDARD_RESULT_PATH} \
-    --meta_file_standard ${STANDARD_DATA_NAME} \
+    --eval_file ${RESULT_PATH} \
+    --meta_file ${DATA_NAME} \
     --question_type original \
     --openai_api_key ${OPENAI_API_KEY}

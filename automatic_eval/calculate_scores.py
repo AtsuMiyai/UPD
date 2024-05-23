@@ -395,12 +395,24 @@ def eval_result(eval_file, meta_file, question_type, eval_type, openai_api_key, 
         result = load(result_file)
 
     data = load(eval_file)
+
+    if eval_type == "standard":
+        data = data[data["type"] == "standard"]
+    else:
+        data = data[data["type"] == "upd"]
+
     data = data.sort_values(by='index')
     data['prediction'] = [str(x) for x in data['prediction']]
     for k in data.keys():
         data[k.lower() if k not in 'ABCDE' else k] = data.pop(k)
 
     meta = load_dataset("MM-UPD/MM-UPD", name=meta_file)["test"]
+
+    if eval_type == "standard":
+        meta = meta.filter(lambda example: example["type"] == "standard")
+    else:
+        meta = meta.filter(lambda example: example["type"] == "upd")
+
     data_main = data[data['index'] < int(1e6)]
 
     print(data.prediction.value_counts())
@@ -504,9 +516,10 @@ def evaluate_and_save_scores(eval_file, meta_file, eval_type, question_type,
     Returns:
     - A tupdle of evaluated DataFrames.
     """
+
     overall, l2, leaf = eval_result(eval_file, meta_file,
                                     question_type, eval_type, openai_api_key, upd_type)
-    save_scores([leaf, l2, overall], ["leaf", "l2", "overall"], save_dir)
+    save_scores([leaf, l2, overall], [f"leaf_{eval_type}", f"l2_{eval_type}", f"overall_{eval_type}"], save_dir)
     return overall, l2, leaf
 
 
@@ -553,26 +566,24 @@ def eval_model(args):
         - args: Command-line arguments or any arguments object with necessary attributes.
         """
     # Prepare directory
-    if args.question_type != "original":
-        save_dir_upd = os.path.dirname(args.eval_file_upd)
-    save_dir_standard = os.path.dirname(args.eval_file_standard)
+    save_dir = os.path.dirname(args.eval_file)  # ここら辺も変えないといけない。
 
     # Evaluate UPD dataset and save scores
     if args.question_type != "original":
         print("Evaluating upd dataset...")
         eval_result_upd = evaluate_and_save_scores(
-            args.eval_file_upd, args.meta_file_upd,
+            args.eval_file, args.meta_file,
             args.upd_type, args.question_type,
-            args.openai_api_key, save_dir_upd,
+            args.openai_api_key, save_dir,
             args.upd_type
         )
 
     # Evaluate standard dataset and save scores
     print("Evaluating standard dataset...")
     eval_result_standard = evaluate_and_save_scores(
-        args.eval_file_standard, args.meta_file_standard,
+        args.eval_file, args.meta_file,
         "standard", args.question_type,
-        args.openai_api_key, save_dir_standard,
+        args.openai_api_key, save_dir,
         args.upd_type
     )
 
@@ -581,25 +592,23 @@ def eval_model(args):
 
     # Plot radar chart
     leaf_standard, leaf_upd = eval_result_standard[2], eval_result_upd[2]  # Assuming the third return value is the leaf DataFrame
-    figure_save_path = os.path.join(save_dir_standard, f"radar_chart.png")
+    figure_save_path = os.path.join(save_dir, f"radar_chart.png")
     plot_radar_chart(leaf_standard, leaf_upd, figure_save_path, args.upd_type)
     print(f"Radar chart saved to {figure_save_path}")
 
     # dual results and evaluate
     print("Dual evaluating results...")
-    standard_result_path = args.eval_file_standard.replace('.xlsx', '_standard.xlsx')
-    upd_result_path = args.eval_file_upd.replace('.xlsx', f'_{args.upd_type}.xlsx')
-    dual_results(standard_result_path, upd_result_path, save_dir_standard)
+    standard_result_path = args.eval_file.replace('.xlsx', '_standard.xlsx')
+    upd_result_path = args.eval_file.replace('.xlsx', f'_{args.upd_type}.xlsx')
+    dual_results(standard_result_path, upd_result_path, save_dir)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--upd_type', type=str, choices=["aad", "iasd", "ivqd"], required=True)
-    parser.add_argument('--eval_file_upd', type=str)
+    parser.add_argument('--eval_file', type=str)
     parser.add_argument('--question_type', type=str, default="base")
-    parser.add_argument('--eval_file_standard', type=str)
-    parser.add_argument('--meta_file_upd', type=str)
-    parser.add_argument('--meta_file_standard', type=str)
+    parser.add_argument('--meta_file', type=str)
     parser.add_argument('--openai_api_key', type=str, required=True)
     args = parser.parse_args()
 

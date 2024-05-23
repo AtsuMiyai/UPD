@@ -82,7 +82,10 @@ def eval_model(args):
             idx = row['index']
             question = row['question']
             hint = row['hint']
+            eval_type = row['type']
             image = load_image_from_base64(row['image'])
+
+
             if not is_none(hint):
                 question = hint + '\n' + question
             for option_char, option in zip(all_options[:len(options)], options):
@@ -128,6 +131,7 @@ def eval_model(args):
 
             ans_id = shortuuid.uuid()
             ans_file.write(json.dumps({"question_id": idx,
+                                       "eval_type": eval_type,
                                        "round_id": round_idx,
                                        "prompt": cur_prompt,
                                        "text": outputs,

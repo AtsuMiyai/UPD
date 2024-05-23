@@ -7,7 +7,7 @@ from datasets import load_dataset
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data-name", type=str, default="mmaad_aad_base")
+    parser.add_argument("--data-name", type=str, default="mmaad_base")
     parser.add_argument("--result-dir", type=str, required=True)
     parser.add_argument("--upload-dir", type=str, required=True)
     parser.add_argument("--experiment", type=str, required=True)
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     for pred in open(os.path.join(args.result_dir, f"{args.experiment}.jsonl")):
         pred = json.loads(pred)
-        cur_df.loc[df['index'] == pred['question_id'], 'prediction'] = pred['text']
+        cur_df.loc[(df['index'] == pred['question_id']) & (df['type'] == pred['eval_type']), 'prediction'] = pred['text']
 
     cur_df.to_excel(os.path.join(args.upload_dir, f"{args.experiment}.xlsx"),\
                     index=False, engine='openpyxl')

@@ -30,7 +30,8 @@
 </div>
 
 ## News
-2024.03: The short version (4p) of this paper has been accepted by [ICLR 2024 R2-FM Workshop](https://iclr-r2fm.github.io). 
+2024.05: We have refactor the structure of the codebase to evaluate both UPD and Standard problems at once.  
+2024.03: The short version (4p.) of this paper has been accepted by [ICLR 2024 R2-FM Workshop](https://iclr-r2fm.github.io). 
 
 
 ## Introduction
@@ -115,17 +116,11 @@ We put each script in `~/scripts/inference/<VLM name>/<UPD>`.
 For example, to implement LLaVA-1.5 13B for the base setting,
 you can implement the following commands for each AAD and Standared senario:
 
-#### base aad
+#### base
 ```bash
-bash scripts/inference/llava1.5/aad/base_aad.sh
+bash scripts/inference/llava1.5/aad/base.sh
 ```
-By implelenting the above code, the result is automatically created under `output/aad/answers_upload/llava1.5/base/mmaad_aad_base/llava1.5-13b_<time_stamp>.xlsx`
-
-#### base standard 
-```bash
-bash scripts/inference/llava1.5/aad/base_standard.sh
-```
-By implelenting the above code, the result is automatically created under `output/aad/answers_upload/llava1.5/base/mmaad_standard_base/llava1.5-13b_<time_stamp>.xlsx`
+By implelenting the above code, the result is automatically created under `output/aad/answers_upload/llava1.5/base/mmaad_base/llava1.5-13b_<time_stamp>.xlsx`
 
 ### 2. Evaluation
 We put each evaluation script in `~/scripts/evaluation/<UPD>`.
@@ -133,10 +128,9 @@ We put each evaluation script in `~/scripts/evaluation/<UPD>`.
 For example, to evaluate the performance of LLaVA-1.5 13B for the base setting,
 you can implement the following commands:
 ```bash 
-bash scripts/evaluation/aad/eval_base.sh <UPD_RESULT_PATH> <STANDARD_RESULT_PATH> 
+bash scripts/evaluation/aad/eval_base.sh <RESULT_PATH>
 ```
-> * <UPD_RESULT_PATH> is `output/aad/answers_upload/llava1.5/base/mmaad_aad_base/llava1.5-13b_<time_stamp>.xlsx` in this example.    
-> * <STANDARD_RESULT_PATH> is `output/aad/answers_upload/llava1.5/base/mmaad_standard_base/llava1.5-13b_<time_stamp>.xlsx` in this example.   
+> * <RESULT_PATH> is `output/aad/answers_upload/llava1.5/base/mmaad_base/llava1.5-13b_<time_stamp>.xlsx` in this example.    
 
 By implelenting the above code, the result is automatically created in each RESULT_PATH folder.
 
@@ -169,7 +163,7 @@ If you have questions, please open an issue mentioning @AtsuMiyai or send an ema
 ## Ads
 If you are interested in this work, please refer to our other projects.
 * [OpenOOD](https://github.com/Jingkang50/OpenOOD), in NeurIPS Dataset and Benchmark Track, 2022 
-* [OpenOOD v1.5](https://github.com/Jingkang50/OpenOOD) in NeurIPSW, 2023
+* [OpenOOD v1.5](https://github.com/Jingkang50/OpenOOD), in NeurIPSW, 2023
 * [LoCoOp](https://github.com/AtsuMiyai/LoCoOp/), in NeurIPS, 2023.
 
 

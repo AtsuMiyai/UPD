@@ -1,13 +1,9 @@
 #!/bin/bash
 
-bash scripts/inference/cogvlm/aad/original_standard.sh
+bash scripts/inference/cogvlm/aad/original.sh
 
-bash scripts/inference/cogvlm/aad/base_standard.sh
-bash scripts/inference/cogvlm/aad/base_aad.sh
+bash scripts/inference/cogvlm/aad/base.sh
 
-bash scripts/inference/cogvlm/aad/option_standard.sh
-bash scripts/inference/cogvlm/aad/option_aad.sh
+bash scripts/inference/cogvlm/aad/option.sh
 
-bash scripts/inference/cogvlm/aad/instruction_standard.sh
-bash scripts/inference/cogvlm/aad/instruction_aad.sh
-
+bash scripts/inference/cogvlm/aad/instruction.sh
