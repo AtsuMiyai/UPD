@@ -504,7 +504,7 @@ def save_scores(score_values, score_names, save_dir):
 def evaluate_and_save_scores(eval_file, meta_file, eval_type, question_type,
                              openai_api_key, save_dir, upd_type):
     """
-    Evaluates the model, saves the score values, 
+    Evaluates the model, saves the score values,
     and returns the evaluated dataframes.
 
     Parameters:
@@ -569,7 +569,7 @@ def eval_model(args):
         - args: Command-line arguments or any arguments object with necessary attributes.
         """
     # Prepare directory
-    save_dir = os.path.dirname(args.eval_file)  # ここら辺も変えないといけない。
+    save_dir = os.path.dirname(args.eval_file)
 
     # Evaluate UPD dataset and save scores
     if args.question_type != "original":
