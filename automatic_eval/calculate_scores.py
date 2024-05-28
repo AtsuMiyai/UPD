@@ -526,7 +526,7 @@ def evaluate_and_save_scores(eval_file, meta_file, eval_type, question_type,
     return overall, l2, leaf
 
 
-def dual_results(standard_result_path, upd_result_path, save_dir):
+def dual_results(standard_result_path, upd_result_path, eval_file, save_dir):
     """
     dual standard and upd dataset results, evaluates them, and saves the dual scores.
 
@@ -548,8 +548,11 @@ def dual_results(standard_result_path, upd_result_path, save_dir):
     dual_df['category'] = dual_df['category_standard']
 
     # Evaluate dual results
-    overall_dual, l2_dual, leaf_dual = eval_result_dual(dual_df)
     # Assuming eval_result_dual returns three DataFrames: overall, l2, and leaf scores
+    overall_dual, l2_dual, leaf_dual = eval_result_dual(dual_df)
+
+    # Save dual df
+    dump(dual_df, eval_file.replace('.xlsx', '_dual.xlsx'))
 
     # Save dual scores
     save_scores(
@@ -603,7 +606,7 @@ def eval_model(args):
     print("Dual evaluating results...")
     standard_result_path = args.eval_file.replace('.xlsx', '_standard.xlsx')
     upd_result_path = args.eval_file.replace('.xlsx', f'_{args.upd_type}.xlsx')
-    dual_results(standard_result_path, upd_result_path, save_dir)
+    dual_results(standard_result_path, upd_result_path, args.eval_file, save_dir)
 
 
 if __name__ == '__main__':
