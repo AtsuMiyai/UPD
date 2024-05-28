@@ -508,8 +508,11 @@ def evaluate_and_save_scores(eval_file, meta_file, eval_type, question_type,
     and returns the evaluated dataframes.
 
     Parameters:
-    - eval_file, meta_file, question_type, eval_type,
-      openai_api_key: Parameters for the evaluation function.
+    - eval_file: The file path for the evaluation results.
+    - meta_file: The dataset name for the metadata.
+    - question_type: The type of question. either "base", "option", "inst".
+    - eval_type: The type of evaluation. either "standard", "aad", "iasd", "ivqd".
+    - openai_api_key: openai api key.
     - save_dir: Directory to save the score files.
     - upd_type: The type of UPD. either "aad", "iasd", or "ivqd".
 
