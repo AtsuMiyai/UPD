@@ -99,7 +99,10 @@ def dump(data, f):
         pickle.dump(data, open(pth, 'wb'))
 
     def dump_json(data, pth):
-        json.dump(data, open(pth, 'w'))
+        if isinstance(data, pd.DataFrame):
+            data.to_json(pth, orient='records', indent=2)
+        else:
+            json.dump(data, open(pth, 'w'))
 
     def dump_jsonl(data, f):
         lines = [json.dumps(x, ensure_ascii=False) for x in data]

@@ -552,7 +552,8 @@ def dual_results(standard_result_path, upd_result_path, eval_file, save_dir):
     overall_dual, l2_dual, leaf_dual = eval_result_dual(dual_df)
 
     # Save dual df
-    dump(dual_df, eval_file.replace('.xlsx', '_dual.xlsx'))
+    dump(dual_df, eval_file.replace('.xlsx', '_dual_detail.xlsx'))
+    dump(dual_df, eval_file.replace('.xlsx', '_dual_detail_submission.json'))
 
     # Save dual scores
     save_scores(
