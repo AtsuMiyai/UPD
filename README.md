@@ -1,5 +1,5 @@
 # Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models
-[**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
+[**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
 <p align="center" width="100%">
 <img src=figs/overview_upd.png  width="100%" height="100%">
 <div>
