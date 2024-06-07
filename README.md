@@ -161,9 +161,15 @@ We provide a Google Sheet for the detailed results on each senario (Fig. 3, 4 ,5
 You can add your favorite VLMs in a very easy way! 
 1.  Create `vlms/<your_vlm>/<your_vlm>_vqa_updbench.py` with reference to other files.
 
-2.  Create script files by implementing `bash scripts/create_your_scripts.sh <vlms> <suffix (version, model size etc.)>` (coming soon)
+2.  Create script files in `scripts/inference/<your_vlm>` with reference to other files.
 
 After the performance check, let's send a PR! 
+
+
+## Leaderboard Submission
+We are opening your submission to our [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard). 
+If you finish your eval with the eval scrip in `scripts/evaluation` and get a result file (`_dual_detail_submission.json`),  
+let's submit your result file into the leaderboard.
 
 
 ## Acknowledgement
