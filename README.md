@@ -1,5 +1,10 @@
 # Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models
 [**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
+
+|⭐️ We are accepting PR for adding VLMs. Please do not hesitate to send them. We'll update [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) with your VLMs! ⭐️|
+|-----------------------------------------|
+
+
 <p align="center" width="100%">
 <img src=figs/overview_upd.png  width="100%" height="100%">
 <div>
@@ -122,7 +127,7 @@ you can implement the following commands for each AAD and Standared senario:
 ```bash
 bash scripts/inference/llava1.5/aad/base.sh
 ```
-By implelenting the above code, the result is automatically created under `output/aad/answers_upload/llava1.5/base/mmaad_base/llava1.5-13b_<time_stamp>.xlsx`
+By implementing the above code, the result is automatically created under `output/aad/answers_upload/llava1.5/base/mmaad_base/llava1.5-13b_<time_stamp>.xlsx`
 
 ### 2. Evaluation
 We put each evaluation script in `~/scripts/evaluation/<UPD>`.
@@ -134,7 +139,7 @@ bash scripts/evaluation/aad/eval_base.sh <RESULT_PATH>
 ```
 > * <RESULT_PATH> is `output/aad/answers_upload/llava1.5/base/mmaad_base/llava1.5-13b_<time_stamp>.xlsx` in this example.    
 
-By implelenting the above code, the result is automatically created in each RESULT_PATH folder.
+By implementing the above code, the result is automatically created in each RESULT_PATH folder.
 
 ### 3. Instruction Tuning
 We put each script in `~/scripts/inst_tuning`.
@@ -152,11 +157,22 @@ We provide a Google Sheet for the detailed results on each senario (Fig. 3, 4 ,5
 
 
 
+## How to Add New VLMs
+You can add your favorite VLMs in a very easy way! 
+1.  Create `vlms/<your_vlm>/<your_vlm>_vqa_updbench.py` with reference to other files.
+
+2.  Create script files by implementing `bash scripts/create_your_scripts.sh <vlms> <suffix (version, model size etc.)>` (coming soon)
+
+After the performance check, let's send a PR! 
+
+
 ## Acknowledgement
 We adopt these codes to create this repository.
 * [Visual Instruction Tuning](https://github.com/haotian-liu/LLaVA), in NeurIPS, 2023.
 * [OpenCompass](https://github.com/open-compass/opencompass)
 * [Otter](https://github.com/Luodian/Otter/)
+
+We thank the [HF group](https://huggingface.co/) for their kind assistance in the creation and promotion of our Leaderboard.
 
 
 ## Contact
