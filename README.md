@@ -35,8 +35,10 @@
 </div>
 
 ## News
-2024.05: We have refactor the structure of the codebase to evaluate both UPD and Standard problems at once.  
-2024.03: The short version (4p.) of this paper has been accepted by [ICLR 2024 R2-FM Workshop](https://iclr-r2fm.github.io). 
+- 2024.05: We have created our [🏆 Leaderboard](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) with the support of the HuggingFace group.   
+- 2024.05: MM-UPD has been integrated into the [LMMs-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) codebase.   
+- 2024.05: We have refactored the structure of the codebase to evaluate both UPD and Standard problems at once.   
+- 2024.03: The short version (4p.) of this paper has been accepted by [ICLR 2024 R2-FM Workshop](https://iclr-r2fm.github.io). 
 
 
 ## Introduction
