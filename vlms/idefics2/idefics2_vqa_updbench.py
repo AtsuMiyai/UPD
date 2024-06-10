@@ -109,17 +109,19 @@ def eval_model(args):
             with torch.inference_mode():
                 generated_text = model.generate(**inputs, max_new_tokens=500)
                 outputs = processor.batch_decode(generated_text, skip_special_tokens=True)[0]
+                start_index = outputs.find("Assistant: ")
+                generated_output = outputs[start_index + len("Assistant: "):]
 
             ans_id = shortuuid.uuid()
             ans_file.write(json.dumps({"question_id": idx,
                                        "eval_type": eval_type,
                                        "round_id": round_idx,
                                        "prompt": cur_prompt,
-                                       "text": outputs,
+                                       "text": generated_output,
                                        "options": options,
                                        "option_char": cur_option_char,
                                        "answer_id": ans_id,
-                                       "model_id": "Qwen-VL-Chat",
+                                       "model_id": "Idefics2",
                                        "prompt_detail": qs,
                                        "metadata": {}}) + "\n")
             ans_file.flush()
