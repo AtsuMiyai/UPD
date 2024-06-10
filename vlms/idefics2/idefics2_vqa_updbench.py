@@ -6,7 +6,6 @@ import pandas as pd
 from tqdm import tqdm
 import shortuuid
 import math
-from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import Idefics2Processor, Idefics2ForConditionalGeneration
 from PIL import Image
 from io import BytesIO
