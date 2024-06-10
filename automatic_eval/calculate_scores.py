@@ -384,7 +384,8 @@ def eval_sub_data(model, sub_data, answer_map, gt_text_map, question_type, eval_
 def eval_result(eval_file, meta_file, question_type, eval_type, openai_api_key, upd_type):
     rd.seed(2680)
 
-    model = OpenAI('gpt-3.5-turbo-0613', retry=10, openai_api_key=openai_api_key)
+    # model = OpenAI('gpt-3.5-turbo-0613', retry=10, openai_api_key=openai_api_key)
+    model = OpenAI('gpt-3.5-turbo-0125', retry=10, openai_api_key=openai_api_key)
 
     double_log(f'Evaluating {eval_file}', fout)
 
