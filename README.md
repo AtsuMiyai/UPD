@@ -197,7 +197,7 @@ If you are interested in this work, please refer to our other projects.
 ## Citaiton
 If you find our work interesting or use our code/models, please consider citing:
 ```bibtex
-@article{miyai2024upd,
+@article{miyai2024unsolvable,
   title={Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models},
   author={Miyai, Atsuyuki and Yang, Jingkang and Zhang, Jingyang and Ming, Yifei and Yu, Qing and Irie, Go and Li, Yixuan and Li, Hai and Liu, Ziwei and Aizawa, Kiyoharu},
   journal={arXiv preprint arXiv:2403.20331},
