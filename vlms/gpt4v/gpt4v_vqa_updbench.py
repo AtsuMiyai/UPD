@@ -83,11 +83,12 @@ class BaseModel(ABC):
 
 
 class OpenAIGPT4Vision(BaseModel):
-    def __init__(self, api_key: str, max_new_tokens: int = 256):
+    def __init__(self, api_key: str, model_name: str, max_new_tokens: int = 256):
         super().__init__("openai-gpt4", "gpt-4-vision-preview")
         self.api_key = api_key
         self.headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
         self.max_new_tokens = max_new_tokens
+        self.model_name = model_name
 
     @staticmethod
     def encode_image_to_base64(raw_image_data) -> str:
@@ -102,7 +103,7 @@ class OpenAIGPT4Vision(BaseModel):
         base64_image = self.encode_image_to_base64(raw_image_data)
 
         payload = {
-            "model": "gpt-4-vision-preview",
+            "model": self.model_name,
             "messages": [
                 {
                     "role": "user",
@@ -145,7 +146,7 @@ def eval_model(args):
     ans_file = open(answers_file, "w")
     api_key = args.openai_api_key
 
-    model = OpenAIGPT4Vision(api_key)
+    model = OpenAIGPT4Vision(api_key, args.model_name)
 
     for row in tqdm(questions, total=len(questions)):
         options = get_options(row, all_options)
@@ -194,7 +195,7 @@ def eval_model(args):
                                        "options": options,
                                        "option_char": cur_option_char,
                                        "answer_id": ans_id,
-                                       "model_id": "OpenAI-GPT4-Vision",
+                                       "model_id": args.model_name,
                                        "prompt_detail": prompt,
                                        "metadata": {}}) + "\n")
             ans_file.flush()
@@ -207,6 +208,7 @@ if __name__ == "__main__":
     parser.add_argument("--answers-file", type=str, default="answer.jsonl")
     parser.add_argument("--num-chunks", type=int, default=1)
     parser.add_argument("--chunk-idx", type=int, default=0)
+    parser.add_argument("--model_name", type=str, default="gpt-4-vision-preview")
     parser.add_argument("--openai-api-key", type=str, default='')
     parser.add_argument("--all-rounds", action="store_true")
     parser.add_argument("--single-pred-prompt", action="store_true")
