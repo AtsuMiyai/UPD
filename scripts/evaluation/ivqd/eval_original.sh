@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STANDARD_RESULT_PATH=$1
+RESULT_PATH=$1
 
 DATA_NAME=mmivqd_base
 

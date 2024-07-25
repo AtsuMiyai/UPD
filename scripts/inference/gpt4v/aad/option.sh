@@ -3,7 +3,6 @@
 DATA_NAME="mmaad_option"
 CURRENT_TIME=$(date +"%Y%m%d%H%M%S")
 FILE_NAME="gpt4v_${CURRENT_TIME}"
-OPENAI_API_KEY="Your OpenAI API Key"
 
 python -m vlms.gpt4v.gpt4v_vqa_updbench \
     --data-name ${DATA_NAME} \
