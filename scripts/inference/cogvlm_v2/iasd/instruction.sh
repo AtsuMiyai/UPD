@@ -2,7 +2,7 @@
 
 DATA_NAME="mmiasd_base"
 CURRENT_TIME=$(date +"%Y%m%d%H%M%S")
-FILE_NAME="cogvlm_v2-17b_${CURRENT_TIME}"
+FILE_NAME="cogvlm_v2-19b_${CURRENT_TIME}"
 
 python -m vlms.cogvlm_v2.cogvlm_v2_vqa_updbench \
     --data-name ${DATA_NAME} \
