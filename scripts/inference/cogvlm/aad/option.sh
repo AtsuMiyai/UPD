@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATA_NAME="mmaad_standard_option"
+DATA_NAME="mmaad_option"
 CURRENT_TIME=$(date +"%Y%m%d%H%M%S")
 FILE_NAME="cogvlm-17b_${CURRENT_TIME}"
 
