@@ -89,6 +89,7 @@ def eval_model(args):
         for round_idx in range(num_rounds):
             idx = row['index']
             question = row['question']
+            eval_type = row['type']
             hint = row['hint']
             image = load_image_from_base64(row['image'])
             if not is_none(hint):
@@ -136,6 +137,7 @@ def eval_model(args):
 
             ans_id = shortuuid.uuid()
             ans_file.write(json.dumps({"question_id": idx,
+                                       "eval_type": eval_type,
                                         "round_id": round_idx,
                                         "prompt": cur_prompt,
                                         "text": outputs,
