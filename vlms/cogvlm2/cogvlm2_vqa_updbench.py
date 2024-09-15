@@ -144,7 +144,7 @@ def eval_model(args):
                                         "options": options,
                                         "option_char": cur_option_char,
                                         "answer_id": ans_id,
-                                        "model_id": "CogVLM_v2",
+                                        "model_id": "CogVLM2",
                                         "prompt_detail": qs,
                                         "metadata": {}}) + "\n")
             ans_file.flush()
