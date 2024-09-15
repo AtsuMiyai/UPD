@@ -96,8 +96,8 @@ def eval_model(args):
             messages = [{
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": qs},
                     {"type": "image"},
+                    {"type": "text", "text": qs},
                 ],
             }]
 
