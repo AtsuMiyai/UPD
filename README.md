@@ -1,4 +1,4 @@
-# Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models
+# Unsolvable Problem Detection: Robust Understanding Evaluation for Large Multimodal Models [ACL2025]
 [**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
 
 |⭐️ We are opening PRs for adding VLMs. Please do not hesitate to send them. We'll update [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) with your favorite VLMs! ⭐️|
@@ -198,7 +198,7 @@ If you are interested in this work, please refer to our other projects.
 If you find our work interesting or use our code/models, please consider citing:
 ```bibtex
 @article{miyai2024unsolvable,
-  title={Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models},
+  title={Unsolvable Problem Detection: Robust Understanding Evaluation for Large Multimodal Models},
   author={Miyai, Atsuyuki and Yang, Jingkang and Zhang, Jingyang and Ming, Yifei and Yu, Qing and Irie, Go and Li, Yixuan and Li, Hai and Liu, Ziwei and Aizawa, Kiyoharu},
   journal={arXiv preprint arXiv:2403.20331},
   year={2024}
