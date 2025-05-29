@@ -1,4 +1,4 @@
-# Unsolvable Problem Detection: Robust Understanding Evaluation for Large Multimodal Models [ACL2025]
+# Unsolvable Problem Detection: Robust Understanding Evaluation for Large Multimodal Models [ACL (main)2025]
 [**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
 
 |⭐️ We are opening PRs for adding VLMs. Please do not hesitate to send them. We'll update [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) with your favorite VLMs! ⭐️|
@@ -42,8 +42,7 @@
 
 
 ## Introduction
-This paper introduces a novel and significant challenge for Vision Language Models (VLMs), termed **Unsolvable Problem Detection (UPD)**. UPD examines the VLM's ability to withhold answers when faced with unsolvable problems in the context of Visual Question Answering (VQA) tasks. UPD encompasses three distinct settings: **Absent Answer Detection (AAD)**, **Incompatible Answer Set Detection (IASD)**, and **Incompatible Visual Question Detection (IVQD)**. To deeply investigate the UPD problem, extensive experiments indicate that **most VLMs, including GPT-4V and LLaVA-Next-34B, struggle with our benchmarks to varying extents**, highlighting significant room for the improvements. To address UPD, we explore both training-free and training-based solutions, offering new insights into their effectiveness and limitations. We hope our insights, together with future efforts within the proposed UPD settings, will enhance the broader understanding and development of more practical and reliable VLMs.
-
+This paper introduces a novel task to evaluate the robust understanding capability of Large Multimodal Models (LMMs), termed **Unsolvable Problem Detection (UPD)**. Multiple-choice question answering (MCQA) is widely used to assess the understanding capability of LMMs, but it does not guarantee that LMMs truly comprehend the answer. UPD assesses the LMM's ability to withhold answers when encountering unsolvable problems of MCQA, verifying whether the model truly understands the answer. UPD encompasses three problems: **Absent Answer Detection (AAD)**, **Incompatible Answer Set Detection (IASD)**, and **Incompatible Visual Question Detection (IVQD)**, covering unsolvable cases like answer-lacking or incompatible choices and image-question mismatches. For the evaluation, we introduce the **MM-UPD Bench**, a benchmark for assessing performance across various ability dimensions. Our experiments reveal that even most LMMs, which demonstrate adequate performance on existing benchmarks, struggle significantly with MM-UPD, underscoring a novel aspect of trustworthiness that current benchmarks have overlooked.
 
 ## Requirements
 
@@ -153,12 +152,6 @@ bash scripts/inst_tuning/llava1.6_34b_lora_tuning.sh
 As of March 2024, LLaVA1.6 has not yet released official LoRA tuning code. Therefore, please be aware that the our instruction tuning code may differ from the official LLaVA implementation.
 
 
-## Model Results
-We provide a Google Sheet for the detailed results on each senario (Fig. 3, 4 ,5 ,6 in the paper). You can access [the sheet](https://docs.google.com/spreadsheets/d/1tm4QEe5RluI9jAINSzVoPcmYPTH5Yn_UMEh6sPG9XeI/edit#gid=0) here and can easily draw radar charts!
-![SPREAD_SHEET](figs/spread_sheet.png)
-
-
-
 ## How to Add New VLMs
 You can add your favorite VLMs in a very easy way! 
 1.  Create `vlms/<your_vlm>/<your_vlm>_vqa_updbench.py` with reference to other files.
@@ -197,9 +190,9 @@ If you are interested in this work, please refer to our other projects.
 ## Citaiton
 If you find our work interesting or use our code/models, please consider citing:
 ```bibtex
-@article{miyai2024unsolvable,
+@inproceedings{miyai2025unsolvable,
   title={Unsolvable Problem Detection: Robust Understanding Evaluation for Large Multimodal Models},
   author={Miyai, Atsuyuki and Yang, Jingkang and Zhang, Jingyang and Ming, Yifei and Yu, Qing and Irie, Go and Li, Yixuan and Li, Hai and Liu, Ziwei and Aizawa, Kiyoharu},
-  journal={arXiv preprint arXiv:2403.20331},
-  year={2024}
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2025}
 }
