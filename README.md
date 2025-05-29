@@ -1,9 +1,6 @@
 # Unsolvable Problem Detection: Robust Understanding Evaluation for Large Multimodal Models [ACL (main)2025]
 [**🤗 Dataset**](https://huggingface.co/datasets/MM-UPD/MM-UPD) | [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) | [**📖 arXiv**](http://arxiv.org/abs/2403.20331) | [**GitHub**](https://github.com/AtsuMiyai/UPD/)
 
-|⭐️ We are opening PRs for adding VLMs. Please do not hesitate to send them. We'll update [**🏆 Leaderboard**](https://huggingface.co/spaces/MM-UPD/MM-UPD_Leaderboard) with your favorite VLMs! ⭐️|
-|-----------------------------------------|
-
 
 <p align="center" width="100%">
 <img src=figs/overview_upd.png  width="100%" height="100%">
