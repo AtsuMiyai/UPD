@@ -17,7 +17,7 @@ dependencies = [
     "transformers==4.41.2", "tokenizers==0.19.1", "sentencepiece==0.1.99", "shortuuid",
     "datasets==2.18.0", "accelerate==0.21.0", "peft", "bitsandbytes",
     "pydantic", "markdown2[all]", "numpy", "scikit-learn==1.2.2",
-    "gradio==4.19.2", "gradio_client==0.10.1",
+    "gradio==6.7.0", "gradio_client==0.10.1",
     "requests", "httpx==0.24.1", "uvicorn", "fastapi",
     "einops==0.6.1", "einops-exts==0.0.4", "timm==0.6.13",
     "openpyxl", "xformers==0.0.22.post7",
